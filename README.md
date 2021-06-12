@@ -43,7 +43,7 @@ The master data is read by the Unity Application follow the below diagram.
 ![Read Write User Playing Data](Images~/RealBizGames_Analysis-UserPlayingData.png)
 
 # Reference
-1. [C# Json Library](https://github.com/jilleJr/Newtonsoft.Json-for-Unity)
-\
-\
-\
+1. [C# Json Library - Newtonsoft.Json](https://github.com/jilleJr/Newtonsoft.Json-for-Unity)
+  
+  
+
