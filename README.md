@@ -22,6 +22,8 @@ As I have talked above, I can summarized:
   
 ![Design Data with GoogleSheet](Tools~/Result.png)
   
+Here is an [example](https://docs.google.com/spreadsheets/d/1UW6Xrvq8k1lkGMBbbfvy-Ej1XrUgG6QfEHn_7ZZOIB0/edit?usp=sharing) for you.
+  
 #### How does our game read the MasterData?
   
 The master data is read by the Unity Application follow the below diagram.
@@ -29,13 +31,19 @@ The master data is read by the Unity Application follow the below diagram.
 ![Read Master Data](Images~/RealBizGames_Analysis-_MasterData.png)
 
 #### Where can you store your master data
-1. [Firebase Remote Config](https://firebase.google.com/products/remote-config)
-2. [Firebase Cloud Storage](https://firebase.google.com/docs/storage)
-3. [Unity Remote Config](https://unity.com/remote-config)
-4. [AWS S3](https://aws.amazon.com/s3/)
-5. Your Own Backend Service
-6. Unity Game (Local)
+1. Inside Build (Local)
+2. [Firebase Remote Config](https://firebase.google.com/products/remote-config)
+3. [Firebase Cloud Storage](https://firebase.google.com/docs/storage)
+4. [Unity Remote Config](https://unity.com/remote-config)
+5. [AWS S3](https://aws.amazon.com/s3/)
+6. Your Own Backend Service
 
 ## II. User Playing Data
 
 ![Read Write User Playing Data](Images~/RealBizGames_Analysis-UserPlayingData.png)
+
+# Reference
+1. [C# Json Library](https://github.com/jilleJr/Newtonsoft.Json-for-Unity)
+\
+\
+\
