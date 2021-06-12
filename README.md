@@ -21,3 +21,12 @@ As I have talked above, I can summarized:
 ***Step 3:*** Use this .json file as you want.  
   
 ![Design Data with GoogleSheet](Tools~/Result.png)
+  
+#### How does our game read the MasterData?
+  
+The master data is read by the Unity Application follow the below diagram.
+  
+![Read Master Data](Images~/RealBizGames_Analysis-_MasterData.png)
+  
+
+## II. User Playing Data
