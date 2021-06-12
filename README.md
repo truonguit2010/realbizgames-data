@@ -29,9 +29,9 @@ The master data is read by the Unity Application follow the below diagram.
 ![Read Master Data](Images~/RealBizGames_Analysis-_MasterData.png)
 
 #### Where can you store your master data
-1. Firebase Remote Config [More information](https://firebase.google.com/products/remote-config)
-2. Firebase Cloud Storage [More information](https://firebase.google.com/docs/storage)
-3. Unity Remote Config [More information](https://unity.com/remote-config)
+1. [Firebase Remote Config](https://firebase.google.com/products/remote-config)
+2. [Firebase Cloud Storage](https://firebase.google.com/docs/storage)
+3. [Unity Remote Config](https://unity.com/remote-config)
 4. Your Own Backend Service
 5. Unity Game (Local)
 
