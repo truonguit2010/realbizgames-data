@@ -32,8 +32,9 @@ The master data is read by the Unity Application follow the below diagram.
 1. [Firebase Remote Config](https://firebase.google.com/products/remote-config)
 2. [Firebase Cloud Storage](https://firebase.google.com/docs/storage)
 3. [Unity Remote Config](https://unity.com/remote-config)
-4. Your Own Backend Service
-5. Unity Game (Local)
+4. [AWS S3](https://aws.amazon.com/s3/)
+5. Your Own Backend Service
+6. Unity Game (Local)
 
 ## II. User Playing Data
 
