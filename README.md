@@ -13,7 +13,11 @@ As I have talked above, I can summarized:
 
 
 ## I. Master Data
+  
+![Design Data with GoogleSheet](Tools~/Sample.png)
 
-1. ***Step 1:*** Design master data. We use Google Sheet to design this type of data. Google Sheet is a good choice for sharing and work together. It is easy to integrate with our backend to run some productivity tasks.  
-2. ***Step 2:*** Export MasterData into json file that easy to work with development system. You can use my script to do this job.
-3. ***Step 3:*** Use this .json file as you want.
+***Step 1:*** Design master data. We use Google Sheet to design this type of data. Google Sheet is a good choice for sharing and work together. It is easy to integrate with our backend to run some productivity tasks.  
+***Step 2:*** Export MasterData into json file that easy to work with development system. You can use my script to do this job.  
+***Step 3:*** Use this .json file as you want.  
+  
+![Design Data with GoogleSheet](Tools~/Result.png)
