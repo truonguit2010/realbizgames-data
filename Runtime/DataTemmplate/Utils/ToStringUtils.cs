@@ -8,7 +8,7 @@ public class ToStringUtils
 
     public static string ToStringFor(object obj)
     {
-        PropertyInfo[] _PropertyInfos = obj.GetType().GetProperties();
+        PropertyInfo[] _PropertyInfos = obj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public);
         var sb = new StringBuilder();
 
         sb.Append("[").Append(obj.GetType().Name).Append(" ");
