@@ -39,4 +39,14 @@ public class GenericPlayerPrefDictionaryRepository<T> : IPlayerPrefDictionaryRep
     {
         MAPlayerPrefDictionary.Save(id, data);
     }
+
+    public List<T> GetAll()
+    {
+        return MAPlayerPrefDictionary.GetAll();
+    }
+
+    public List<string> GetAllKey()
+    {
+        return MAPlayerPrefDictionary.GetAllKey();
+    }
 }

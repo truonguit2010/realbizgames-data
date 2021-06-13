@@ -32,6 +32,14 @@ public class MAPlayerPrefDictionary<T>
         }
     }
 
+    public List<T> GetAll() {
+        return new List<T>(Data.Values);
+    }
+
+    public List<string> GetAllKey() {
+        return new List<string>(Data.Keys);
+    }
+
     public void Save(string key, T data)
     {
         Data[key] = data;

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 public class ToStringUtils
@@ -20,5 +21,13 @@ public class ToStringUtils
         sb.Append("]");
 
         return sb.ToString();
+    }
+
+    public static string ToStringForList<T>(List<T> l) {
+        string message = "Total: " + l.Count + "\n";
+        foreach (T o in l) {
+            message += o.ToString() + "\n";
+        }
+        return message;
     }
 }
