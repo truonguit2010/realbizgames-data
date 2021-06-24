@@ -9,14 +9,18 @@ public class ToStringUtils
 
     public static string ToStringFor(object obj)
     {
-        PropertyInfo[] _PropertyInfos = obj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public);
+        PropertyInfo[] _PropertyInfos = obj.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.GetField);
         var sb = new StringBuilder();
 
         sb.Append("[").Append(obj.GetType().Name).Append(" ");
         foreach (var info in _PropertyInfos)
         {
-            var value = info.GetValue(obj, null) ?? "(null)";
-            sb.Append(info.Name).Append(ASSIGN).Append(value.ToString()).Append(SEP);
+            if (info.CanRead) {
+                var value = info.GetValue(obj, null) ?? "(null)";
+                sb.Append(info.Name).Append(ASSIGN).Append(value.ToString()).Append(SEP);    
+            } else {
+                sb.Append(info.Name).Append(ASSIGN).Append("Value cannot be read").Append(SEP);
+            }
         }
         sb.Append("]");
 
