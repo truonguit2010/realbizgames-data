@@ -42,6 +42,13 @@ The master data is read by the Unity Application follow the below diagram.
 
 ![Read Write User Playing Data](Images~/RealBizGames_Analysis-UserPlayingData.png)
 
+## III. Using this package
+
+Insert the below line into your manifest.json
+
+```
+"com.realbizgames.data": "https://github.com/truonguit2010/realbizgames-data.git#v1.0.0",
+```
 # Reference
 1. [C# Json Library - Newtonsoft.Json](https://github.com/jilleJr/Newtonsoft.Json-for-Unity)
   
