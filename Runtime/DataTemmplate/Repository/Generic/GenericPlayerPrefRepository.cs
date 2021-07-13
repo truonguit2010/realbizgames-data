@@ -30,11 +30,13 @@ public class GenericPlayerPrefRepository<T> : IPlayerPrefRepository<T>
 
     public void Save(T data)
     {
+        lazyInit();
         MAPlayerPrefData.Save(data);
     }
 
     public T GetT()
     {
+        lazyInit();
         return MAPlayerPrefData.Data;
     }
 }

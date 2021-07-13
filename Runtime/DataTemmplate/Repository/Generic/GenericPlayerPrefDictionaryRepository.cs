@@ -32,21 +32,25 @@ public class GenericPlayerPrefDictionaryRepository<T> : IPlayerPrefDictionaryRep
 
     public T Get(string id)
     {
+        lazyInit();
         return MAPlayerPrefDictionary.GetByKey(id);
     }
 
     public void Save(string id, T data)
     {
+        lazyInit();
         MAPlayerPrefDictionary.Save(id, data);
     }
 
     public List<T> GetAll()
     {
+        lazyInit();
         return MAPlayerPrefDictionary.GetAll();
     }
 
     public List<string> GetAllKey()
     {
+        lazyInit();
         return MAPlayerPrefDictionary.GetAllKey();
     }
 }
