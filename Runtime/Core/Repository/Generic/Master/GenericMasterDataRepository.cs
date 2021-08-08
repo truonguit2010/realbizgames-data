@@ -2,7 +2,6 @@
 
 public class GenericMasterDataRepository<T> : IMasterDataRepository<T>
 {
-    
     public RealbizGames.Data.IMasterDataDictionary<T> MasterDataDictionary;
     public string JsonFilePath { get; private set; }
 
@@ -48,5 +47,10 @@ public class GenericMasterDataRepository<T> : IMasterDataRepository<T>
     {
         lazyInit();
         return MasterDataDictionary.FindAll();
+    }
+
+    public List<string> GetAllKey() {
+        lazyInit();
+        return MasterDataDictionary.GetAllKey();
     }
 }

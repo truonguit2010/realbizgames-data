@@ -35,6 +35,11 @@ namespace RealbizGames.Data
             return MasterDataDictionary.FindById(id: id);
         }
 
+        public List<string> GetAllKey() {
+            lazyInit();
+            return MasterDataDictionary.GetAllKey();
+        }
+
         public void init()
         {
             lazyInit();

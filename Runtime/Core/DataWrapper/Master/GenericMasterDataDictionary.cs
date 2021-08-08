@@ -9,18 +9,29 @@ namespace RealbizGames.Data
 
         public string jsonString { get; private set; }
 
-        public GenericMasterDataDictionary(string jsonString = "")
+        private IMasterDataDictionaryLoader _loader;
+        private string _name;
+
+        public GenericMasterDataDictionary(string jsonString = "", IMasterDataDictionaryLoader loader = null, string name = null)
         {
             this.jsonString = jsonString;
-            Init();
+            this._loader = loader;
+            this._name = name;
+            LoadInternal();
         }
-
+        // -------------------------------------------------
+        // INIT
+        // -------------------------------------------------
+        public void Load() {
+            jsonString = this._loader.load();
+            LoadInternal();
+        }
         public void Load(IMasterDataDictionaryLoader loader)
         {
+            this._loader = loader;
             jsonString = loader.load();
-            Init();
+            LoadInternal();
         }
-
         public void Merge(IMasterDataDictionaryLoader loader)
         {
             string more = loader.load();
@@ -31,8 +42,11 @@ namespace RealbizGames.Data
                 dataMap[entry.Key] = entry.Value;
             }
         }
-
-        private void Init()
+        public void Reload() {
+            jsonString = this._loader.load();
+            LoadInternal();
+        }
+        private void LoadInternal()
         {
             if (!string.IsNullOrEmpty(jsonString))
             {
@@ -43,12 +57,25 @@ namespace RealbizGames.Data
                 dataMap = new Dictionary<string, T>();
             }
         }
-
         private Dictionary<string, T> json2Dic(string jsonString)
         {
             return JsonConvert.DeserializeObject<Dictionary<string, T>>(jsonString);
         }
-
+        // -------------------------------------------------
+        // VALIDATING
+        // -------------------------------------------------
+        public bool IsNotEmpty() {
+            return dataMap.Count > 0;
+        }
+        public bool IsEmpty() {
+            return dataMap.Count == 0;
+        }
+        // -------------------------------------------------
+        // READ
+        // -------------------------------------------------
+        public string GetName() {
+            return _name;
+        }
         public T FindById(string id)
         {
             if (dataMap.ContainsKey(id))
@@ -81,6 +108,10 @@ namespace RealbizGames.Data
             return valuatedData;
 
         }
+        public List<string> GetAllKey() {
+            return new List<string>(dataMap.Keys);
+        }
+                
     }
 
 }

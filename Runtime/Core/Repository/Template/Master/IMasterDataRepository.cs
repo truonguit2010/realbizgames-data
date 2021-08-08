@@ -7,4 +7,7 @@ public interface IMasterDataRepository<T> : IRepository
     List<T> FindAllByIds(List<string> ids);
     
     List<T> FindAll();
+
+    List<string> GetAllKey();
+
 }

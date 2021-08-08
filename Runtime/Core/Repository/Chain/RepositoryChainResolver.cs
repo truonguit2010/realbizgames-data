@@ -53,6 +53,10 @@ namespace RealbizGames.Data
             return default;
         }
 
+        public List<string> GetAllKey() {
+            return null;
+        }
+
         public void init()
         {
             for (int i = 0; i < repositories.Count; i++)
